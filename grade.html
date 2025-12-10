@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De La Morishita University (DLMU)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        h2, p {
+            margin: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #111111;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;">
+
+        <div class="container-fluid text-black text-center p-3" style="background-color: rgb(38, 73, 50);">
+            <h1 style="font-family: 'Times New Roman', Times, serif;">De La Morishita University</h1>
+            <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif;">Famous in Education since 1998</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="grade.html">See your GWA</a></li>
+                <li><a href="club.html">DLMU Clubs</a></li>
+            </ul>
+        </div>
+    
+    </div>
+
+    <h3 style="text-align: center; margin-top: 20px; font-family: 'Times New Roman', Times, serif;">DLMU GWA Calculator</h3>
+
+    <div style="margin-top: 20px; padding: 20px; width: max-content; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-left: 33%;" class="rounded">
+        <div style="display: flex; flex-direction: row;">
+
+            <div>
+                <p style="margin-bottom: 0%;">Name</p>
+                <input id="name" class="form-control rounded" style="width: 250px;" placeholder="Surname, First Name" type="text">
+            </div>
+
+            <div style="margin-left: 5px;">
+                <p style="margin-bottom: 0%;">Graduation Date</p>
+                <input id="grad_year" class="form-control rounded" style="width: 250px;" placeholder="MM/DD/YYYY" type="date">
+            </div>
+
+        </div>
+
+        <div>
+            <p style="margin-bottom: 0%;">Quarter One</p>
+            <input id="quarter_one" class="form-control rounded" style="width: 500px;" placeholder="Final grade here" type="number">
+
+            <p style="margin-bottom: 0%;">Quarter Two</p>
+            <input id="quarter_two" class="form-control rounded" style="width: 500px;" placeholder="Final grade here" type="number">
+
+            <p style="margin-bottom: 0%;">Quarter Three</p>
+            <input id="quarter_three" class="form-control rounded" style="width: 500px;" placeholder="Final grade here" type="number">
+
+            <p style="margin-bottom: 0%;">Quarter Four</p>
+            <input id="quarter_four" class="form-control rounded" style="width: 500px;" placeholder="Final grade here" type="number">
+        </div>
+
+        
+        <button class="btn btn-outline-success" style="width: 500px; margin-top: 20px; margin-bottom: 20px;"
+            py-click="generate_score">
+            View GWA
+        </button>
+        
+    </div>
+
+    <div style="width: 546px; padding: 20px; margin-left: 33%; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-top: 15px; background-color: rgb(127, 195, 127); margin-bottom: 20px;" class="rounded" id="gwaresult"></div>
+
+
+
+    <script type="py" src="main.py"></script>
+
+    
+</body>
+</html>
